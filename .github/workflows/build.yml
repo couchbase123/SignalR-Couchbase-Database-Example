@@ -31,7 +31,7 @@ jobs:
 
       - name: Build
         run: msbuild SignalR.Couchbase.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
- 
+
       - name: Publish Web App
         - uses: ravsamhq/notify-slack-action@v2
           if: always()
