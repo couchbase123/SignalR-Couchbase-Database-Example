@@ -25,7 +25,7 @@ jobs:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
       - name: Build
-        run: msbuild SignalR.Couchbase.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+        run: msbuild SignalR.Couchbase.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=Test /p:AllowUntrustedCertificate=true
 
       - name: Publish Web App
         uses: ravsamhq/notify-slack-action@v2
